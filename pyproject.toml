@@ -27,7 +27,6 @@ pydantic = "^2.11.7"
 torch = {version = "^2.7.1", source = "pytorch"}
 fastapi = {extras = ["standard"], version = "^0.115.12"}
 
-
 [tool.poetry.group.dev.dependencies]
 isort = "^6.0.1"
 pytest = "^8.3.5"
