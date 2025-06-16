@@ -1,0 +1,18 @@
+name: ouranos-runtime
+
+services:
+  ouranos:
+    build:
+      context: .
+      # This docker compose file is used in production
+      target: runtime
+      dockerfile: Dockerfile
+    image: ouranos-runtime
+    container_name: ouranos-runtime
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]

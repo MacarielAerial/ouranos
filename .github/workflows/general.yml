@@ -1,0 +1,10 @@
+
+        uses: actions/checkout@v4
+
+      - name: Build and test with devcontainer
+        uses: devcontainers/ci@v0.3
+        with:
+          runCmd: |
+            poetry install
+            poetry run ./lint.sh
+            poetry run ./test.sh
