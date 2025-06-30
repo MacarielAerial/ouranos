@@ -176,9 +176,9 @@ ENV PATH="/home/${USERNAME}/app/.venv/bin:$PATH"
 EXPOSE 80
 
 # Implement an health check
-HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
-  CMD curl -f http://localhost:80/health-check || exit 1
+# HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
+#   CMD curl -f http://localhost:80/health-check || exit 1
 
 # Auto start the fastapi service on start-up
-ENTRYPOINT ["fastapi", "run", "src/medusa/main.py", "--port", "80"]
+# ENTRYPOINT ["fastapi", "run", "src/medusa/main.py", "--port", "80"]
 
