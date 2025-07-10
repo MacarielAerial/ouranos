@@ -7,7 +7,7 @@ ARG USER_GID=$USER_UID
 # Multi Stage: Dev Image
 #
 
-FROM nvidia/cuda:12.6.3-cudnn-devel-ubuntu22.04 AS dev
+FROM nvidia/cuda:12.8.1-cudnn-devel-ubuntu22.04 AS dev
 
 # Arguments associated with the non-root user
 ARG USERNAME
@@ -104,7 +104,7 @@ RUN poetry install --without dev
 # Multi Stage: Runtime Image
 #
 
-FROM nvidia/cuda:12.6.3-cudnn-runtime-ubuntu22.04 AS runtime
+FROM nvidia/cuda:12.8.1-cudnn-runtime-ubuntu22.04 AS runtime
 
 # Arguments associated with the non-root user
 ARG USERNAME
