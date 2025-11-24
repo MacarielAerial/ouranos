@@ -20,7 +20,7 @@ jobs:
 
     steps:
       - name: Check out code at the branch you released against
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           # this will be the branch (or commit SHA) you selected in the Release UI
           ref: ${{ github.event.release.target_commitish }}
